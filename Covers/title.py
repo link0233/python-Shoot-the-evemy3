@@ -8,3 +8,10 @@ class covers_title:
             self.canvas.move(self.item,0,-10)
             root.update()
             time.sleep(0.01)
+
+    def loop(self):
+        self.canvas.delete(self.item)
+        self.item=canvas.create_text(500,1000,text='Shoot-the-evemy',font=('Arial',50),fill='#ffffff')
+
+    def delete(self):
+        self.canvas.delete(self.item)

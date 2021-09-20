@@ -28,3 +28,7 @@ class start:
                 'bg':self.canvas.create_rectangle(400,225,600,275,fill='White'),
                 'text':self.canvas.create_text(500,250,text='start',fill='#000000',font=('Arial',20))
             }
+
+    def delete(self):
+        self.canvas.delete(self.item['bg'])
+        self.canvas.delete(self.item['text'])
