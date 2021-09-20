@@ -12,3 +12,19 @@ class start:
             self.canvas.move(self.item['text'],-10,0)
             root.update()
             time.sleep(0.01)
+
+    def loop(self,x,y):
+        if abs(x-500)<100 and abs(y-250)<25:
+            self.canvas.delete(self.item['bg'])
+            self.canvas.delete(self.item['text'])
+            self.item={
+                'bg':self.canvas.create_rectangle(400,225,600,275,fill='#68e4ff'),
+                'text':self.canvas.create_text(500,250,text='start',fill='#000000',font=('Arial',20))
+            }
+        else:
+            self.canvas.delete(self.item['bg'])
+            self.canvas.delete(self.item['text'])
+            self.item={
+                'bg':self.canvas.create_rectangle(400,225,600,275,fill='White'),
+                'text':self.canvas.create_text(500,250,text='start',fill='#000000',font=('Arial',20))
+            }

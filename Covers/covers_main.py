@@ -9,3 +9,6 @@ class cover:
     def Loading(self,root,time):
         self.title.loading(root,time)
         self.start.Loading(root,time)
+
+    def loop(self,eventx,eventy):
+        self.start.loop(eventx,eventy)
