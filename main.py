@@ -1,5 +1,6 @@
 from tkinter import *
 from Covers.covers_main import *
+import time
 
 class main(Canvas):
     def __init__(self,width=1000,height=700):
@@ -8,7 +9,9 @@ class main(Canvas):
         super(main,self).__init__(self.root,width=width,height=height,bg='#ffaaff')
         self.pack()
 
-        cover(self)
+        time.sleep(1)
+        self.cover=cover(self)
+        self.cover.Loading(self.root,time)
 
         self.root.mainloop()
 if __name__=='__main__':
