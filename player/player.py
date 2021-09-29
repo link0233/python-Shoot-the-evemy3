@@ -16,6 +16,7 @@ class player:
         self.xy=self.canvas.coords(self.item)
         #射擊
         self.si.step(self.xy[0],self.xy[1]-20)
+        self.si.loop()
 
         if abs(x-self.xy[0])>3:
             if self.xy[0]>x:
