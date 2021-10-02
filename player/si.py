@@ -5,7 +5,7 @@ class si:
         
     def step(self,x,y):
         self.item.append({
-            'item':self.canvas.create_rectangle(x-5,y-20,x+5,y,fill='#ff0000'),
+            'item':self.canvas.create_rectangle(x-5,y-20,x+5,y,fill='#0000ff'),
             'xy':[x-5,y-20,x+5,y]
         })
 

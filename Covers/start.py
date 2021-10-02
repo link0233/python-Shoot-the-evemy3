@@ -2,7 +2,7 @@ class start:
     def __init__(self,canvas):
         self.item={
             'bg':canvas.create_rectangle(-200,225,0,275,fill='White'),
-            'text':canvas.create_text(1100,250,text='start',fill='#ffaaff',font=('Arial',20))
+            'text':canvas.create_text(1100,250,text='start',fill='#000000',font=('Arial',20))
         }
         self.canvas=canvas
 
@@ -19,14 +19,14 @@ class start:
             self.canvas.delete(self.item['text'])
             self.item={
                 'bg':self.canvas.create_rectangle(400,225,600,275,fill='#68e4ff'),
-                'text':self.canvas.create_text(500,250,text='start',fill='#ffaaff',font=('Arial',20))
+                'text':self.canvas.create_text(500,250,text='start',fill='#000000',font=('Arial',20))
             }
         else:
             self.canvas.delete(self.item['bg'])
             self.canvas.delete(self.item['text'])
             self.item={
                 'bg':self.canvas.create_rectangle(400,225,600,275,fill='White'),
-                'text':self.canvas.create_text(500,250,text='start',fill='#ffaaff',font=('Arial',20))
+                'text':self.canvas.create_text(500,250,text='start',fill='#000000',font=('Arial',20))
             }
 
     def delete(self):

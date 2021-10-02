@@ -4,6 +4,7 @@ class player:
     def __init__(self,canvas):
         self.canvas=canvas
         self.si=si(canvas)
+        self.time=0
 
     def start(self,item,root,time):
         self.item=self.canvas.create_image(500,800,image=item)
@@ -13,13 +14,16 @@ class player:
             time.sleep(0.01)
 
     def loop(self,x,y):
+        self.time+=1
         self.xy=self.canvas.coords(self.item)
         #射擊
-        self.si.step(self.xy[0],self.xy[1]-20)
+        if self.time>10:
+            self.si.step(self.xy[0],self.xy[1]-20)
+            self.time=0
         self.si.loop()
 
-        if abs(x-self.xy[0])>3:
+        if abs(x-self.xy[0])>5:
             if self.xy[0]>x:
-                self.canvas.move(self.item,-3,0)
+                self.canvas.move(self.item,-5,0)
             else:
-                self.canvas.move(self.item,3,0)
+                self.canvas.move(self.item,5,0)
