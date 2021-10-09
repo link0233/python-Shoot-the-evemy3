@@ -2,6 +2,7 @@ from tkinter import *
 from Covers.covers_main import *
 import time
 from player.player import player
+from gui.gui import gui_main
 
 class main(Canvas):
     def __init__(self,width=1000,height=700):
@@ -15,6 +16,7 @@ class main(Canvas):
         self.cover.Loading(self.root,time)
 
         self.player=player(self)
+        self.gui=gui_main(self)
 
         self.bind('<Motion>',self.mot)
         self.bind('<Button-1>',self.button1)
