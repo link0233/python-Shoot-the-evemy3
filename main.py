@@ -18,6 +18,7 @@ class main(Canvas):
 
         self.bind('<Motion>',self.mot)
         self.bind('<Button-1>',self.button1)
+        self.bind('<B1-Motion>',self.b1mot)
         self.x=0
         self.y=0
         self.but1=0
@@ -32,7 +33,9 @@ class main(Canvas):
 
         self.start()
         while True:
-            self.player.loop(self.x,self.y)
+            self.player.loop(self.x,self.but1)
+
+            self.but1=0
 
             self.root.update()
             time.sleep(0.01)
@@ -51,6 +54,11 @@ class main(Canvas):
     def start(self):
         self.player_image=PhotoImage(file='platyer_image.png')
         self.player.start(self.player_image,self.root,time)
+
+    def b1mot(self,event):
+        self.x=event.x
+        self.y=event.y
+        self.but1=1
 
 if __name__=='__main__':
     main()

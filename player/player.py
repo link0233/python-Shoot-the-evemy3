@@ -13,11 +13,11 @@ class player:
             root.update()
             time.sleep(0.01)
 
-    def loop(self,x,y):
+    def loop(self,x,button1):
         self.time+=1
         self.xy=self.canvas.coords(self.item)
         #射擊
-        if self.time>10:
+        if self.time>10 and button1==1:
             self.si.step(self.xy[0],self.xy[1]-20)
             self.time=0
         self.si.loop()
