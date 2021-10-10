@@ -6,7 +6,7 @@ class gui_main:
         self.label=label(canvas)
 
     def start(self):
-        self.label.new('aaaa')
+        self.label.new('player_sit')
 
     def loop(self):
         self.label.loop()
