@@ -13,3 +13,5 @@ class mob:
                 self.text+=test.strip()
             self.text=self.text.split(',')
             print(self.text)
+            self.image=self.PhotoImage(file='./evemy/evemy_image/'+self.text[0]+'.png')
+            self.items.append({'item':self.canvas.create_image(320,240,image=self.image)})
