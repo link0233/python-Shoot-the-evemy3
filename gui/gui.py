@@ -7,3 +7,6 @@ class gui_main:
 
     def start(self):
         self.label.new('aaaa')
+
+    def loop(self):
+        self.label.loop()

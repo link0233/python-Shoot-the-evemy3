@@ -36,6 +36,7 @@ class main(Canvas):
         self.start()
         while True:
             self.player.loop(self.x,self.but1)
+            self.gui.loop()
 
             self.but1=0
 
