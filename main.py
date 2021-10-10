@@ -56,6 +56,7 @@ class main(Canvas):
     def start(self):
         self.player_image=PhotoImage(file='platyer_image.png')
         self.player.start(self.player_image,self.root,time)
+        self.gui.start()
 
     def b1mot(self,event):
         self.x=event.x
