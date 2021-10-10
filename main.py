@@ -15,6 +15,7 @@ class main(Canvas):
         time.sleep(1)
         self.cover=cover(self)
         self.cover.Loading(self.root,time)
+        self.level=1
 
         self.player=player(self)
         self.gui=gui_main(self)
@@ -41,6 +42,7 @@ class main(Canvas):
             self.gui.loop()
 
             self.but1=0
+            self.evemy.mob.loop()
 
             self.root.update()
             time.sleep(0.01)
@@ -60,6 +62,7 @@ class main(Canvas):
         self.player_image=PhotoImage(file='platyer_image.png')
         self.player.start(self.player_image,self.root,time)
         self.gui.start()
+        self.evemy.level1()
 
     def b1mot(self,event):
         self.x=event.x
